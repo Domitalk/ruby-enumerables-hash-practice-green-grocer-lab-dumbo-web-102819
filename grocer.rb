@@ -34,10 +34,10 @@ end
 
 
 def apply_clearance(cart)
-  cart.each do |item|
+  cart.each do |item, attributes|
 
-      if cart[item][:clearance] == true
-        cart[item][:price] = (cart[item][:price] * 0.80).round(2)
+      if attributes[:clearance] == true
+        attributes[:price] = (attributes[:price] * 0.80).round(2)
       end
   end
 
